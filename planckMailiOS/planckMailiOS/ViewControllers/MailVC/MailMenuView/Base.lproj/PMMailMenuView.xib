@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PMMailMenuView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qeb-NK-qeM">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OLW-2g-Wxe">
+                    <rect key="frame" x="0.0" y="53" width="257" height="461"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="59m-XY-M5M">
+                            <rect key="frame" x="0.0" y="0.0" width="257" height="461"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <outlet property="dataSource" destination="iN0-l3-epB" id="Olk-6u-GlB"/>
+                                <outlet property="delegate" destination="iN0-l3-epB" id="PYn-qu-vZC"/>
+                            </connections>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="257" id="Fte-kW-ohe"/>
+                        <constraint firstAttribute="trailing" secondItem="59m-XY-M5M" secondAttribute="trailing" id="II6-vb-wc9"/>
+                        <constraint firstAttribute="bottom" secondItem="59m-XY-M5M" secondAttribute="bottom" id="STk-9L-fJn"/>
+                        <constraint firstItem="59m-XY-M5M" firstAttribute="top" secondItem="OLW-2g-Wxe" secondAttribute="top" id="mPz-L2-bUy"/>
+                        <constraint firstItem="59m-XY-M5M" firstAttribute="leading" secondItem="OLW-2g-Wxe" secondAttribute="leading" id="s2l-aY-aCX"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="OLW-2g-Wxe" secondAttribute="bottom" constant="54" id="6rV-YM-GVV"/>
+                <constraint firstItem="OLW-2g-Wxe" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="53" id="Hga-Zj-YWe"/>
+                <constraint firstAttribute="bottom" secondItem="qeb-NK-qeM" secondAttribute="bottom" id="NJm-PK-YRA"/>
+                <constraint firstAttribute="trailing" secondItem="qeb-NK-qeM" secondAttribute="trailing" id="Qvt-2U-WbO"/>
+                <constraint firstItem="qeb-NK-qeM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="cAS-XM-ZTp"/>
+                <constraint firstItem="OLW-2g-Wxe" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="iCm-cT-a2l"/>
+                <constraint firstItem="qeb-NK-qeM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="mGL-1h-wch"/>
+            </constraints>
+            <connections>
+                <outlet property="_contentView" destination="OLW-2g-Wxe" id="Tzc-5O-pEw"/>
+                <outlet property="_contentViewLeftPosition" destination="iCm-cT-a2l" id="ad9-e2-wZm"/>
+                <outlet property="_tableView" destination="59m-XY-M5M" id="6Ot-uw-RPj"/>
+                <outlet property="_tapView" destination="qeb-NK-qeM" id="ji3-Te-rZC"/>
+            </connections>
+            <point key="canvasLocation" x="313" y="320"/>
+        </view>
+    </objects>
+</document>

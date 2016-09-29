@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PMMenuHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="308" height="75"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bsB-cF-KPA">
+                    <rect key="frame" x="0.0" y="0.0" width="308" height="75"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="account_gmail_icon" translatesAutoresizingMaskIntoConstraints="NO" id="0Zo-cU-4ct">
+                            <rect key="frame" x="8" y="25" width="26" height="26"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="26" id="MBA-88-Z4G"/>
+                                <constraint firstAttribute="height" constant="26" id="WRG-kb-KpK"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nicolaianton727@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsp-IL-QfK">
+                            <rect key="frame" x="42" y="19" width="180" height="19"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="180" id="bEs-LS-La0"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                            <color key="textColor" red="0.1058823529" green="0.1058823529" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gmail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Esr-Uv-o5w">
+                            <rect key="frame" x="42" y="39" width="40" height="18"/>
+                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                            <color key="textColor" red="0.62352941179999999" green="0.62352941179999999" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsF-xn-U0V">
+                            <rect key="frame" x="0.0" y="0.0" width="308" height="75"/>
+                            <connections>
+                                <action selector="headerBntPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="LsR-vZ-GUA"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIw-1q-aJo">
+                            <rect key="frame" x="230" y="18" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="3YT-Qi-JBB"/>
+                                <constraint firstAttribute="height" constant="40" id="CHZ-uk-Zly"/>
+                            </constraints>
+                            <state key="normal" image="arrow_down"/>
+                            <connections>
+                                <action selector="btnExpandPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="XIx-KF-oHe"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qH8-fc-DBm">
+                            <rect key="frame" x="230" y="18" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="2d6-T9-7Pw"/>
+                                <constraint firstAttribute="height" constant="40" id="laa-ss-hMa"/>
+                            </constraints>
+                            <state key="normal" image="arrow_up"/>
+                            <connections>
+                                <action selector="btnCollapsePressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="rvq-8z-ZPK"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h7b-pb-X3Y">
+                            <rect key="frame" x="0.0" y="74" width="308" height="1"/>
+                            <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="cTB-ZY-Z20"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="bsF-xn-U0V" firstAttribute="height" secondItem="bsB-cF-KPA" secondAttribute="height" id="6OV-SL-yqK"/>
+                        <constraint firstItem="bsF-xn-U0V" firstAttribute="width" secondItem="bsB-cF-KPA" secondAttribute="width" id="7Rw-oT-9sQ"/>
+                        <constraint firstItem="xIw-1q-aJo" firstAttribute="centerY" secondItem="bsB-cF-KPA" secondAttribute="centerY" id="9d6-dZ-vwV"/>
+                        <constraint firstAttribute="trailing" secondItem="h7b-pb-X3Y" secondAttribute="trailing" id="G60-F5-WjJ"/>
+                        <constraint firstItem="qH8-fc-DBm" firstAttribute="leading" secondItem="xIw-1q-aJo" secondAttribute="leading" id="Grl-ct-NIt"/>
+                        <constraint firstItem="xIw-1q-aJo" firstAttribute="leading" secondItem="lsp-IL-QfK" secondAttribute="trailing" constant="8" id="Omw-PY-05p"/>
+                        <constraint firstItem="0Zo-cU-4ct" firstAttribute="centerY" secondItem="bsB-cF-KPA" secondAttribute="centerY" id="PZm-dY-CtO"/>
+                        <constraint firstItem="0Zo-cU-4ct" firstAttribute="leading" secondItem="bsB-cF-KPA" secondAttribute="leading" constant="8" id="RaC-YZ-lTp"/>
+                        <constraint firstItem="lsp-IL-QfK" firstAttribute="centerY" secondItem="bsB-cF-KPA" secondAttribute="centerY" constant="-9" id="SNs-7D-H1f"/>
+                        <constraint firstItem="Esr-Uv-o5w" firstAttribute="top" secondItem="lsp-IL-QfK" secondAttribute="bottom" constant="1" id="Scb-td-Ome"/>
+                        <constraint firstItem="bsF-xn-U0V" firstAttribute="centerX" secondItem="bsB-cF-KPA" secondAttribute="centerX" id="ZZv-UO-TNA"/>
+                        <constraint firstItem="qH8-fc-DBm" firstAttribute="centerY" secondItem="bsB-cF-KPA" secondAttribute="centerY" id="n4C-zX-cRl"/>
+                        <constraint firstItem="bsF-xn-U0V" firstAttribute="centerY" secondItem="bsB-cF-KPA" secondAttribute="centerY" id="nTs-WS-Y1W"/>
+                        <constraint firstItem="Esr-Uv-o5w" firstAttribute="leading" secondItem="lsp-IL-QfK" secondAttribute="leading" id="qgq-dt-KgB"/>
+                        <constraint firstItem="h7b-pb-X3Y" firstAttribute="leading" secondItem="bsB-cF-KPA" secondAttribute="leading" id="r7h-mz-gMU"/>
+                        <constraint firstItem="lsp-IL-QfK" firstAttribute="leading" secondItem="0Zo-cU-4ct" secondAttribute="trailing" constant="8" id="rs1-lv-yXL"/>
+                        <constraint firstAttribute="bottom" secondItem="h7b-pb-X3Y" secondAttribute="bottom" id="yX8-ET-4CB"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="bsB-cF-KPA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="595-4M-ruB"/>
+                <constraint firstItem="bsB-cF-KPA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Cqx-Qa-JvS"/>
+                <constraint firstAttribute="trailing" secondItem="bsB-cF-KPA" secondAttribute="trailing" id="NsX-fR-qYj"/>
+                <constraint firstAttribute="bottom" secondItem="bsB-cF-KPA" secondAttribute="bottom" id="rxO-I6-4Zf"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="btnCollapse" destination="qH8-fc-DBm" id="ant-jL-mVK"/>
+                <outlet property="btnExpand" destination="xIw-1q-aJo" id="xCZ-E8-LlH"/>
+                <outlet property="imgViewAccount" destination="0Zo-cU-4ct" id="WlC-nG-Jm6"/>
+                <outlet property="lblEmail" destination="lsp-IL-QfK" id="Gn4-g2-GpH"/>
+                <outlet property="lblEmailCenterYConstraint" destination="SNs-7D-H1f" id="j7g-E3-eW1"/>
+                <outlet property="lblProvider" destination="Esr-Uv-o5w" id="T35-5Q-FID"/>
+            </connections>
+            <point key="canvasLocation" x="198" y="136.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="account_gmail_icon" width="24" height="24"/>
+        <image name="arrow_down" width="19" height="19"/>
+        <image name="arrow_up" width="19" height="19"/>
+    </resources>
+</document>

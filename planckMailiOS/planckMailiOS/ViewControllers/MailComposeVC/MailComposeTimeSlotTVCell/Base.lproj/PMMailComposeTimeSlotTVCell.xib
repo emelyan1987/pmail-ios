@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="timeSlotCell" rowHeight="387" id="KGk-i7-Jjw" customClass="PMMailComposeTimeSlotTVCell">
+            <rect key="frame" x="0.0" y="0.0" width="417" height="387"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="417" height="386"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z7v-tw-nux">
+                        <rect key="frame" x="8" y="8" width="401" height="280"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="280" id="AL6-TG-D70"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="juz-fq-gWh">
+                        <rect key="frame" x="8" y="288" width="401" height="65"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't see a time that works for you?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BY4-D8-hYg">
+                                <rect key="frame" x="0.0" y="8" width="401" height="17"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDm-ad-OoV">
+                                <rect key="frame" x="14" y="35" width="191" height="25"/>
+                                <color key="backgroundColor" red="0.35294117650000001" green="0.76862745099999996" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="Hjd-eQ-07d"/>
+                                    <constraint firstAttribute="width" constant="191" id="wGy-uU-AKp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="None of these times work">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnOtherTimePressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="nUP-m0-epv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dec 25,2015 12:00 pm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pq9-cn-BfL">
+                                <rect key="frame" x="215" y="35" width="160" height="25"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="bMR-kT-COv"/>
+                                    <constraint firstAttribute="height" constant="25" id="tNF-bw-R4V"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="BY4-D8-hYg" secondAttribute="trailing" id="3Y0-VU-7kd"/>
+                            <constraint firstItem="BY4-D8-hYg" firstAttribute="leading" secondItem="juz-fq-gWh" secondAttribute="leading" id="6it-ra-BhU"/>
+                            <constraint firstItem="pq9-cn-BfL" firstAttribute="leading" secondItem="fDm-ad-OoV" secondAttribute="trailing" constant="10" id="J6x-4b-0Tc"/>
+                            <constraint firstItem="pq9-cn-BfL" firstAttribute="top" secondItem="fDm-ad-OoV" secondAttribute="top" id="VxA-mV-Xx9"/>
+                            <constraint firstItem="fDm-ad-OoV" firstAttribute="top" secondItem="BY4-D8-hYg" secondAttribute="bottom" constant="10" id="ZmW-q1-9sQ"/>
+                            <constraint firstItem="BY4-D8-hYg" firstAttribute="top" secondItem="juz-fq-gWh" secondAttribute="top" constant="8" id="nLt-yy-uHF"/>
+                            <constraint firstItem="fDm-ad-OoV" firstAttribute="leading" secondItem="juz-fq-gWh" secondAttribute="leading" constant="14" id="qIW-Gt-Sd0"/>
+                            <constraint firstAttribute="height" constant="65" id="sLt-ST-pBW"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="juz-fq-gWh" firstAttribute="top" secondItem="Z7v-tw-nux" secondAttribute="bottom" id="7Up-NJ-L3A"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="juz-fq-gWh" secondAttribute="leading" id="988-9N-qiZ"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Z7v-tw-nux" secondAttribute="trailing" id="Dtq-tR-2oY"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="juz-fq-gWh" secondAttribute="trailing" id="Rgu-4f-ndd"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="Z7v-tw-nux" secondAttribute="leading" id="ZfG-Nf-yvI"/>
+                    <constraint firstAttribute="topMargin" secondItem="Z7v-tw-nux" secondAttribute="top" id="kpY-Qu-dBX"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="btnOtherTimes" destination="fDm-ad-OoV" id="brY-vY-DlE"/>
+                <outlet property="otherTimeLabel" destination="pq9-cn-BfL" id="Fwh-S0-6HP"/>
+                <outlet property="otherTimeView" destination="juz-fq-gWh" id="sOU-s7-MEb"/>
+                <outlet property="timeSlotView" destination="Z7v-tw-nux" id="kgj-2C-CQg"/>
+                <outlet property="timeSlotViewHeightConstraint" destination="AL6-TG-D70" id="7E8-E0-TkM"/>
+            </connections>
+            <point key="canvasLocation" x="566.5" y="285.5"/>
+        </tableViewCell>
+    </objects>
+</document>

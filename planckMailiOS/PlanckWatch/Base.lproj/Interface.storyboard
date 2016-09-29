@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9515"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController">
+                    <items>
+                        <imageView width="20" height="20" alignment="center" hidden="YES" animationDuration="0.80000000000000004" id="wUd-CB-OTl"/>
+                        <button width="1" alignment="left" hidden="YES" title="Add account" id="6Ik-eI-cU8">
+                            <connections>
+                                <action selector="addAccountPressed" destination="AgC-eL-Hgc" id="Kxc-QH-311"/>
+                            </connections>
+                        </button>
+                        <table alignment="left" id="PeK-x3-ILJ">
+                            <items>
+                                <tableRow identifier="plainType" id="wlC-sT-qZJ" customClass="WKPlainRow">
+                                    <group key="rootItem" width="1" alignment="left" id="BUY-9B-9bx">
+                                        <items>
+                                            <label alignment="center" verticalAlignment="center" text="Label" textAlignment="center" numberOfLines="0" id="AFw-p6-IHq"/>
+                                        </items>
+                                        <color key="backgroundColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="mainGroup" destination="BUY-9B-9bx" id="pvp-sJ-bLY"/>
+                                        <outlet property="titleLable" destination="AFw-p6-IHq" id="7vC-xF-jAE"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <imageView width="86" height="86" alignment="center" verticalAlignment="center" hidden="YES" image="icon_86" contentMode="scaleAspectFit" id="Cii-YG-2AB"/>
+                    </items>
+                    <connections>
+                        <outlet property="activityView" destination="wUd-CB-OTl" id="7Jn-9o-Thi"/>
+                        <outlet property="addAccountButton" destination="6Ik-eI-cU8" id="5vd-xO-UbY"/>
+                        <outlet property="appLogoView" destination="Cii-YG-2AB" id="WQs-1z-vkp"/>
+                        <outlet property="tableView" destination="PeK-x3-ILJ" id="mCQ-i0-oo9"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--emailListController-->
+        <scene sceneID="bNc-xC-MJB">
+            <objects>
+                <controller identifier="emailListController" id="2LA-rQ-Xva" customClass="WKEmailListController">
+                    <items>
+                        <imageView width="20" height="20" alignment="center" hidden="YES" animationDuration="0.80000000000000004" id="0z2-Iw-5pO"/>
+                        <table alignment="left" id="REJ-3i-4sm">
+                            <items>
+                                <tableRow identifier="emailType" id="7iv-ML-Eap" customClass="WKEmailRow">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="G2r-zn-11b">
+                                        <items>
+                                            <group width="1" height="21.5" alignment="left" id="O5s-Ry-Sfd">
+                                                <items>
+                                                    <imageView width="10" height="10" alignment="left" verticalAlignment="center" hidden="YES" image="unread_indicator" id="MMw-h8-i63"/>
+                                                    <label width="1" widthAdjustment="-21" height="20" alignment="left" verticalAlignment="center" text="Label" id="dAu-8u-fvp">
+                                                        <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                                    </label>
+                                                    <imageView width="20" height="20" alignment="right" verticalAlignment="bottom" hidden="YES" animationDuration="0.80000000000000004" id="Hn3-xn-FJP">
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </imageView>
+                                                </items>
+                                                <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                            </group>
+                                            <group width="1" alignment="left" layout="vertical" id="G8z-Ab-PiA">
+                                                <items>
+                                                    <label width="1" alignment="left" text="Label" id="CP6-51-tEy">
+                                                        <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                                    </label>
+                                                    <label width="1" alignment="left" verticalAlignment="bottom" text="Label" textAlignment="right" id="oeE-1P-4zk">
+                                                        <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                                    </label>
+                                                </items>
+                                            </group>
+                                        </items>
+                                        <color key="backgroundColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="activityView" destination="Hn3-xn-FJP" id="aPN-QN-1Ly"/>
+                                        <outlet property="dateLabel" destination="oeE-1P-4zk" id="QmR-8K-LLw"/>
+                                        <outlet property="subjectLabel" destination="CP6-51-tEy" id="DGv-YT-bqq"/>
+                                        <outlet property="titleLabel" destination="dAu-8u-fvp" id="q30-Mt-1DW"/>
+                                        <outlet property="unreadIndicator" destination="MMw-h8-i63" id="fO5-sI-Db7"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="activityView" destination="0z2-Iw-5pO" id="vXv-Zr-9VI"/>
+                        <outlet property="tableView" destination="REJ-3i-4sm" id="BHJ-3q-gDV"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="449" y="345"/>
+        </scene>
+        <!--calendarController-->
+        <scene sceneID="aD5-7G-Bfk">
+            <objects>
+                <controller identifier="calendarController" id="1nd-UC-uBJ" customClass="WKCalendarController">
+                    <items>
+                        <imageView width="20" height="20" alignment="center" hidden="YES" animationDuration="0.80000000000000004" id="s8f-yK-Xat"/>
+                        <table alignment="left" id="RZM-cl-Ipd">
+                            <items>
+                                <tableRow identifier="calendarRowType" id="8g8-DS-GIG" customClass="WKCalendarRow">
+                                    <group key="rootItem" width="1" height="59.5" alignment="left" id="lcV-lf-fnn">
+                                        <items>
+                                            <group width="3" height="61" alignment="left" id="vC1-gq-CPI">
+                                                <color key="backgroundColor" red="0.92731928825378418" green="0.28178930282592773" blue="0.18481966853141785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </group>
+                                            <group width="1" height="0.0" alignment="left" layout="vertical" id="6x0-Ga-pud">
+                                                <items>
+                                                    <group width="1" height="21.5" alignment="left" id="fFa-HH-yJT">
+                                                        <items>
+                                                            <label width="110" height="20" alignment="center" verticalAlignment="center" text="Label" textAlignment="left" id="cU2-oc-LBM">
+                                                                <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                                            </label>
+                                                        </items>
+                                                        <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                                    </group>
+                                                    <group width="1" alignment="left" layout="vertical" id="HHd-48-GcN">
+                                                        <items>
+                                                            <label width="109" alignment="center" verticalAlignment="center" text="Label" id="3SR-GD-1gL">
+                                                                <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                                            </label>
+                                                        </items>
+                                                    </group>
+                                                </items>
+                                                <color key="backgroundColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            </group>
+                                        </items>
+                                        <color key="backgroundColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="durationLabel" destination="3SR-GD-1gL" id="uN9-wx-hWv"/>
+                                        <outlet property="eventTitleLabel" destination="cU2-oc-LBM" id="QRg-wI-R8Z"/>
+                                        <outlet property="strip" destination="vC1-gq-CPI" id="vgR-AX-Oi9"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="activityView" destination="s8f-yK-Xat" id="hCj-1B-Zc3"/>
+                        <outlet property="tableView" destination="RZM-cl-Ipd" id="hHT-GZ-hK6"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="813"/>
+        </scene>
+        <!--EventController-->
+        <scene sceneID="Tpd-VH-r6s">
+            <objects>
+                <controller identifier="EventController" id="Dfs-jc-tre" customClass="WKEventController">
+                    <items>
+                        <group width="1" height="31" alignment="left" id="ouW-PH-0AK">
+                            <items>
+                                <label alignment="left" text="Drive Silvia" id="kt3-J3-apk"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" layout="vertical" id="4UF-S3-kMy">
+                            <items>
+                                <label alignment="left" text="Thursday 04 Jun" id="on1-fd-5ZO">
+                                    <fontDescription key="font" type="system" weight="light" pointSize="12"/>
+                                </label>
+                                <label alignment="left" text="15:15 - 15:30" id="KAV-X0-efr"/>
+                                <group width="1" alignment="left" id="cEE-7a-HmX">
+                                    <items>
+                                        <imageView width="22" height="15" alignment="left" verticalAlignment="center" image="clock" contentMode="scaleAspectFit" id="5le-fM-WEJ"/>
+                                        <label height="16" alignment="left" verticalAlignment="center" text="15 " textAlignment="center" id="ViV-Pr-XKO">
+                                            <fontDescription key="font" type="system" weight="thin" pointSize="13"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                        <group width="1" height="42" alignment="left" id="4xe-li-a1z">
+                            <items>
+                                <imageView width="22" height="17" alignment="left" verticalAlignment="center" image="location" contentMode="scaleAspectFit" id="2ON-qO-qIN"/>
+                                <label alignment="left" verticalAlignment="center" text="Bounce Factory" id="IS8-Xt-P6e">
+                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                </label>
+                            </items>
+                        </group>
+                        <table alignment="left" id="dn9-O4-5eX">
+                            <items>
+                                <tableRow identifier="eventRowType" id="Gub-Ut-F3T" customClass="WKEventRow">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="t6B-QA-RVG">
+                                        <items>
+                                            <label alignment="left" verticalAlignment="center" text="Raj Kumar" numberOfLines="0" id="T8w-g5-lq1">
+                                                <fontDescription key="font" type="system" pointSize="16"/>
+                                            </label>
+                                        </items>
+                                        <color key="backgroundColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="organizerNameLabel" destination="T8w-g5-lq1" id="bGc-4O-x4Q"/>
+                                        <outlet property="rowGroup" destination="t6B-QA-RVG" id="YAj-HH-OjY"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="eventDateLabel" destination="on1-fd-5ZO" id="NFD-TO-Dto"/>
+                        <outlet property="eventDurationLabel" destination="ViV-Pr-XKO" id="cL2-fG-hJe"/>
+                        <outlet property="eventLocationLabel" destination="IS8-Xt-P6e" id="lkJ-0c-vSI"/>
+                        <outlet property="eventTimeFrameLabel" destination="KAV-X0-efr" id="7fS-KN-cLf"/>
+                        <outlet property="eventTitleLabel" destination="kt3-J3-apk" id="Ezz-bZ-fLH"/>
+                        <outlet property="tableView" destination="dn9-O4-5eX" id="sZ7-sh-XIc"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="444" y="819.5"/>
+        </scene>
+        <!--Contacts-->
+        <scene sceneID="eUo-jA-Oat">
+            <objects>
+                <controller identifier="contactsListController" title="Contacts" id="lmW-mS-yRm" customClass="WKContactsController">
+                    <items>
+                        <imageView width="20" height="20" alignment="center" hidden="YES" animationDuration="0.80000000000000004" id="4g6-Ek-PRU"/>
+                        <label width="1" alignment="center" verticalAlignment="center" hidden="YES" text="Label" textAlignment="center" id="MHV-cQ-mbu"/>
+                        <table alignment="left" id="DHw-UE-or0">
+                            <items>
+                                <tableRow identifier="contactRow" id="PDS-xv-c1p" customClass="WKContactRow">
+                                    <group key="rootItem" width="1" alignment="left" id="n6f-dC-xOz">
+                                        <items>
+                                            <label width="1" height="1" alignment="left" verticalAlignment="center" text="Label" numberOfLines="0" id="sM7-ma-KYJ">
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </label>
+                                        </items>
+                                        <color key="backgroundColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="titleLabel" destination="sM7-ma-KYJ" id="cx7-NQ-xXz"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="activityView" destination="4g6-Ek-PRU" id="56I-gP-fcu"/>
+                        <outlet property="noContactsLabel" destination="MHV-cQ-mbu" id="No1-i7-dah"/>
+                        <outlet property="tableView" destination="DHw-UE-or0" id="LJW-1p-Yzv"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="449" y="584"/>
+        </scene>
+        <!--Info-->
+        <scene sceneID="r7R-Nx-vhp">
+            <objects>
+                <controller identifier="contactInfoController" title="Info" id="Vzh-rp-xnF" customClass="WKContactInfoController">
+                    <items>
+                        <imageView width="20" height="20" alignment="center" hidden="YES" animationDuration="0.80000000000000004" id="A3U-8x-ddU"/>
+                        <group width="1" alignment="left" id="drY-ss-MGi">
+                            <items>
+                                <label width="1" widthAdjustment="-40" alignment="left" text=" " numberOfLines="0" id="7QK-lG-H4G"/>
+                                <group width="40" height="40" alignment="left" backgroundImage="user_default_image" radius="20" id="BCi-FR-inD"/>
+                            </items>
+                        </group>
+                        <separator width="1" widthAdjustment="-3" alignment="right" id="LPp-yS-ao5">
+                            <color key="color" red="0.79215686269999996" green="0.78823529410000004" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
+                        </separator>
+                        <label alignment="left" text="CONTACT" id="5kw-YL-TJW">
+                            <color key="textColor" red="0.79215686269999996" green="0.78823529410000004" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <group width="1" alignment="left" id="fyc-1M-m5q">
+                            <items>
+                                <button width="50" height="50" alignment="center" enabled="NO" backgroundImage="phone" id="rNz-v3-7nu">
+                                    <connections>
+                                        <action selector="callDidPressed:" destination="Vzh-rp-xnF" id="fXM-DS-qFY"/>
+                                    </connections>
+                                </button>
+                                <label width="20" height="47.5" alignment="center" id="u9s-bM-zmM"/>
+                                <button width="50" height="50" alignment="center" enabled="NO" backgroundImage="bubble" id="o1n-96-Q3e">
+                                    <fontDescription key="font" type="system" pointSize="15"/>
+                                    <connections>
+                                        <action selector="messageDidPressed:" destination="Vzh-rp-xnF" id="ZPk-Q6-g9i"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="activityView" destination="A3U-8x-ddU" id="Qh4-I4-dAm"/>
+                        <outlet property="callButton" destination="rNz-v3-7nu" id="t2b-Vf-COS"/>
+                        <outlet property="messageButton" destination="o1n-96-Q3e" id="P3X-du-48g"/>
+                        <outlet property="personImage" destination="BCi-FR-inD" id="KB9-hw-hS3"/>
+                        <outlet property="personName" destination="7QK-lG-H4G" id="A5i-Mh-LHL"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="644" y="584"/>
+        </scene>
+        <!--contactPhoneController-->
+        <scene sceneID="0am-VR-DWi">
+            <objects>
+                <controller identifier="contactPhoneController" id="Y8q-AN-M0Q" customClass="WKContactPhonesController">
+                    <items>
+                        <label alignment="center" verticalAlignment="center" hidden="YES" text="This contact hasn't any phone numbers" textAlignment="center" numberOfLines="0" id="iRP-kD-tq2"/>
+                        <table alignment="left" id="Ila-sV-h0j">
+                            <items>
+                                <tableRow identifier="contactPhoneRow" id="BxT-Ts-VuU" customClass="WKContactPhoneRow">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="pvn-fx-fBl">
+                                        <items>
+                                            <label width="1" height="20" alignment="left" text="Label" id="hhk-ZY-Eel">
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
+                                            </label>
+                                            <label width="1" height="20" alignment="left" text="Label" id="zO6-7v-Idq"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="label" destination="hhk-ZY-Eel" id="e2V-xY-aka"/>
+                                        <outlet property="phone" destination="zO6-7v-Idq" id="c8s-D7-ci2"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="haventPhonesLabel" destination="iRP-kD-tq2" id="Enq-lU-Z9t"/>
+                        <outlet property="tableView" destination="Ila-sV-h0j" id="9KE-2n-aQw"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="843" y="584"/>
+        </scene>
+        <!--Message-->
+        <scene sceneID="9AO-tj-UcN">
+            <objects>
+                <controller identifier="emailController" title="Message" id="2ko-XT-grL" customClass="WKEmailController">
+                    <items>
+                        <imageView width="20" height="20" alignment="center" hidden="YES" animationDuration="0.80000000000000004" id="ghP-To-m6q"/>
+                        <label width="1" alignment="left" text="Label" id="L5k-cy-9Uu">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <label width="1" alignment="left" text="Label" id="lsJ-qw-zSx">
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                        </label>
+                        <label width="1" alignment="left" text=" " textAlignment="right" id="10M-le-pej">
+                            <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                        </label>
+                        <separator width="1" alignment="left" id="xLh-v0-mIN">
+                            <color key="color" red="0.24705882352941178" green="0.4392156862745098" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>
+                        </separator>
+                        <label width="1" alignment="left" text=" " numberOfLines="0" minimumScaleFactor="0.70000000000000007" id="7Q9-UZ-Zat"/>
+                        <button width="1" alignment="left" title="Reply" id="dEY-H0-96j">
+                            <connections>
+                                <action selector="replyDidPressed" destination="2ko-XT-grL" id="zdP-BB-ncz"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="activityView" destination="ghP-To-m6q" id="bvR-Cj-mq5"/>
+                        <outlet property="dateLabel" destination="10M-le-pej" id="Zaf-CY-hBq"/>
+                        <outlet property="subjectLabel" destination="lsJ-qw-zSx" id="QlO-n4-P8i"/>
+                        <outlet property="textLabel" destination="7Q9-UZ-Zat" id="UMe-D0-dRh"/>
+                        <outlet property="titleLabel" destination="L5k-cy-9Uu" id="eAK-6f-kDk"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="644" y="345"/>
+        </scene>
+        <!--selectedAnswer-->
+        <scene sceneID="mBl-x9-0fQ">
+            <objects>
+                <controller identifier="selectedAnswer" id="TFf-pD-6Tr" customClass="WKSelectedAnswerController">
+                    <items>
+                        <label width="1" alignment="left" text="Label" numberOfLines="0" id="Ypg-hU-a94"/>
+                        <button width="1" alignment="left" title="Send" id="UCB-Lr-sRh">
+                            <color key="backgroundColor" red="0.0021879591595272804" green="0.75384150552486184" blue="0.026471992537268191" alpha="0.5" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="sendDidPressed" destination="TFf-pD-6Tr" id="97t-cq-CtJ"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Retake" id="rAS-b9-on2">
+                            <color key="backgroundColor" red="0.75384150552486184" green="0.11888485365098944" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="retakeDidPressed" destination="TFf-pD-6Tr" id="UzQ-Qo-DTO"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Cancel" id="kW2-JT-TNG">
+                            <color key="backgroundColor" red="0.051328261120144221" green="0.32225955822664848" blue="0.75384150552486184" alpha="0.5" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="cancelDidPressed" destination="TFf-pD-6Tr" id="DZN-m1-Hbg"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="answerLabel" destination="Ypg-hU-a94" id="iDO-ZQ-N8b"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="843" y="345"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label width="96" height="17" alignment="left" text="Label" id="N9x-41-EBh"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="invite" id="JfB-70-Muf">
+                        <color key="sashColor" red="0.51372549020000002" green="0.7725490196" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </notificationCategory>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="N9x-41-EBh" id="72P-eb-gMz"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="1161"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController">
+                    <items>
+                        <group width="1" alignment="left" hidden="YES" layout="vertical" id="i4Z-Nj-4kl">
+                            <items>
+                                <group width="1" height="26" alignment="left" id="JRC-2b-lph">
+                                    <items>
+                                        <group width="128" alignment="center" verticalAlignment="center" radius="12" id="p0d-Ky-dGH">
+                                            <items>
+                                                <group width="9" height="20" alignment="left" id="Yl6-rE-ZNf"/>
+                                                <label alignment="left" verticalAlignment="center" text="IN 15 min" textAlignment="center" id="pYz-dg-THE">
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="font" type="system" pointSize="9"/>
+                                                </label>
+                                                <imageView width="21" height="16" alignment="right" verticalAlignment="center" image="bell_white" contentMode="scaleAspectFit" id="Rdg-wz-fTY"/>
+                                                <group width="12" height="22" alignment="right" id="eOf-DE-Mvk"/>
+                                            </items>
+                                            <color key="backgroundColor" red="0.92731928825378418" green="0.28178930282592773" blue="0.18481966853141785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </group>
+                                    </items>
+                                </group>
+                                <group width="1" height="26" alignment="left" id="9eV-5u-MpH">
+                                    <items>
+                                        <label alignment="center" text="Lunch with Myke" id="61S-ck-Gud">
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" layout="vertical" id="eF0-f7-PcQ">
+                                    <items>
+                                        <label alignment="center" text="Thursday 04 Jun" id="lVJ-fp-irt">
+                                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" type="system" pointSize="11"/>
+                                        </label>
+                                        <label alignment="center" text="13:05 - 14:05" id="En5-pH-yNj">
+                                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" type="system" pointSize="12"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" id="M2N-q7-QNd">
+                                    <items>
+                                        <group width="43" height="1" alignment="left" id="J2q-mU-Oi5"/>
+                                        <imageView width="21" height="17" alignment="left" image="clock_black" contentMode="scaleAspectFit" id="kgA-y9-18D"/>
+                                        <label width="31" alignment="left" verticalAlignment="center" text="1hr" id="zMl-Bo-1Tp">
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" layout="vertical" id="ht1-TE-Ntk">
+                            <items>
+                                <group width="1" height="26" alignment="left" id="1aW-sM-0gm">
+                                    <items>
+                                        <group width="128" alignment="center" verticalAlignment="center" radius="12" id="cfB-qc-OSz">
+                                            <items>
+                                                <group width="12" height="20" alignment="left" id="yzZ-lS-oUY"/>
+                                                <imageView width="20" height="15" alignment="left" verticalAlignment="center" image="checkmark" contentMode="scaleAspectFit" id="IeM-55-34P"/>
+                                                <label alignment="center" verticalAlignment="center" text="Confirmed" textAlignment="center" id="Fzz-mq-nyc">
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                                </label>
+                                            </items>
+                                            <color key="backgroundColor" red="0.19745490190000001" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </group>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" id="IVu-eD-P8v">
+                                    <items>
+                                        <label alignment="center" verticalAlignment="center" text="Pierre / Cristophe" id="pOw-zM-UZn">
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="font" type="system" pointSize="15"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <group width="1" height="16" alignment="left" id="gKJ-0N-Rfn">
+                                    <items>
+                                        <label alignment="center" verticalAlignment="center" text="Friday, Dec 11 2015" id="8dO-jv-WGM">
+                                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" type="system" pointSize="12"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="acceptedNames" destination="pOw-zM-UZn" id="pEk-cE-tqU"/>
+                        <outlet property="acceptedTime" destination="8dO-jv-WGM" id="M3Z-Nz-YfS"/>
+                        <outlet property="accepted_meetingGroup" destination="ht1-TE-Ntk" id="Vil-Iw-VsE"/>
+                        <outlet property="dateLabel" destination="lVJ-fp-irt" id="Vla-md-NBE"/>
+                        <outlet property="durationLabel" destination="zMl-Bo-1Tp" id="X93-sL-igt"/>
+                        <outlet property="eventTitleLabel" destination="61S-ck-Gud" id="p0b-cN-xJB"/>
+                        <outlet property="remainTimeLabel" destination="pYz-dg-THE" id="B39-3r-HgR"/>
+                        <outlet property="timeLabel" destination="En5-pH-yNj" id="AQ6-xG-ebO"/>
+                        <outlet property="upcoming_meetingGroup" destination="i4Z-Nj-4kl" id="dKX-N9-iTo"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="444" y="1161"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PMContactInfoTableView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ed4-DV-bWW">
+                    <rect key="frame" x="0.0" y="209" width="320" height="359"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="OEc-kH-OUd"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="WFb-YG-L3E"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AE5-5B-S6S">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="194"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile-bg" translatesAutoresizingMaskIntoConstraints="NO" id="CeD-dq-sfM">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="194"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4j-kH-tXU" userLabel="EditButton">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="194"/>
+                            <connections>
+                                <action selector="btnEditTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="PPA-MW-9ib"/>
+                            </connections>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="air-Wo-puv">
+                            <rect key="frame" x="124" y="25" width="72" height="72"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="72" id="XFl-2q-jds"/>
+                                <constraint firstAttribute="width" constant="72" id="dmn-fo-yLb"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emelyan Abramoff" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="db6-rh-9U4">
+                            <rect key="frame" x="86" y="111" width="149" height="22"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dico Technical Ltd, Team Manager" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="naA-oQ-Yfw">
+                            <rect key="frame" x="28" y="137" width="264" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Olga Street 117, Seattle, USA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJU-fc-QoD">
+                            <rect key="frame" x="56" y="162" width="208" height="20"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="H4j-kH-tXU" firstAttribute="height" secondItem="AE5-5B-S6S" secondAttribute="height" id="5nv-PK-u9q"/>
+                        <constraint firstItem="bJU-fc-QoD" firstAttribute="centerX" secondItem="AE5-5B-S6S" secondAttribute="centerX" id="7Q1-QH-nzt"/>
+                        <constraint firstItem="db6-rh-9U4" firstAttribute="top" secondItem="air-Wo-puv" secondAttribute="bottom" constant="14" id="KhU-fK-MoL"/>
+                        <constraint firstItem="H4j-kH-tXU" firstAttribute="centerY" secondItem="AE5-5B-S6S" secondAttribute="centerY" id="OaQ-1g-bFJ"/>
+                        <constraint firstItem="db6-rh-9U4" firstAttribute="centerX" secondItem="AE5-5B-S6S" secondAttribute="centerX" id="RJD-vl-8Iz"/>
+                        <constraint firstItem="naA-oQ-Yfw" firstAttribute="centerX" secondItem="AE5-5B-S6S" secondAttribute="centerX" id="TAe-ms-rSG"/>
+                        <constraint firstItem="H4j-kH-tXU" firstAttribute="width" secondItem="AE5-5B-S6S" secondAttribute="width" id="XQN-d5-NkY"/>
+                        <constraint firstAttribute="height" constant="194" id="ZV6-ui-wzn"/>
+                        <constraint firstItem="H4j-kH-tXU" firstAttribute="centerX" secondItem="AE5-5B-S6S" secondAttribute="centerX" id="ZcN-Nz-Hdk"/>
+                        <constraint firstItem="air-Wo-puv" firstAttribute="top" secondItem="AE5-5B-S6S" secondAttribute="top" constant="25" id="ZhB-y9-1xo"/>
+                        <constraint firstItem="CeD-dq-sfM" firstAttribute="centerX" secondItem="AE5-5B-S6S" secondAttribute="centerX" id="ZkW-Bg-fQj"/>
+                        <constraint firstItem="naA-oQ-Yfw" firstAttribute="top" secondItem="db6-rh-9U4" secondAttribute="bottom" constant="4" id="aF5-Us-RrI"/>
+                        <constraint firstItem="CeD-dq-sfM" firstAttribute="width" secondItem="AE5-5B-S6S" secondAttribute="width" id="pUp-1B-Wtg"/>
+                        <constraint firstItem="CeD-dq-sfM" firstAttribute="centerY" secondItem="AE5-5B-S6S" secondAttribute="centerY" id="rZm-QQ-7gP"/>
+                        <constraint firstItem="air-Wo-puv" firstAttribute="centerX" secondItem="AE5-5B-S6S" secondAttribute="centerX" id="szU-0B-6Iv"/>
+                        <constraint firstItem="CeD-dq-sfM" firstAttribute="height" secondItem="AE5-5B-S6S" secondAttribute="height" id="xZQ-fZ-6R2"/>
+                        <constraint firstItem="bJU-fc-QoD" firstAttribute="top" secondItem="naA-oQ-Yfw" secondAttribute="bottom" constant="4" id="y5p-vM-r9a"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="AE5-5B-S6S" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="4TN-4G-BfB"/>
+                <constraint firstAttribute="trailing" secondItem="AE5-5B-S6S" secondAttribute="trailing" id="Il8-b9-sPZ"/>
+                <constraint firstItem="AE5-5B-S6S" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="VS2-ku-1UD"/>
+                <constraint firstItem="Ed4-DV-bWW" firstAttribute="top" secondItem="AE5-5B-S6S" secondAttribute="bottom" constant="15" id="ZFQ-d1-XyJ"/>
+                <constraint firstAttribute="trailing" secondItem="Ed4-DV-bWW" secondAttribute="trailing" id="hzM-Od-Bdi"/>
+                <constraint firstItem="Ed4-DV-bWW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="r6P-tI-wcc"/>
+                <constraint firstAttribute="bottom" secondItem="Ed4-DV-bWW" secondAttribute="bottom" id="xua-M7-E5Q"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <connections>
+                <outlet property="addressLabel" destination="bJU-fc-QoD" id="ekZ-hT-5de"/>
+                <outlet property="jobLabel" destination="naA-oQ-Yfw" id="IyM-nd-ajz"/>
+                <outlet property="nameLabel" destination="db6-rh-9U4" id="oa3-kI-Ugf"/>
+                <outlet property="profileImageView" destination="air-Wo-puv" id="l9G-Vk-vzg"/>
+                <outlet property="tableView" destination="Ed4-DV-bWW" id="DIN-N5-o5I"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="profile" width="130" height="130"/>
+        <image name="profile-bg" width="258" height="194"/>
+    </resources>
+</document>

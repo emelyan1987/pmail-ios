@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PMSelectionEmailView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bGB-Gs-js3">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W8D-jy-Wpq">
+                    <rect key="frame" x="10" y="76" width="300" height="300"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ezP-uZ-l6y">
+                            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <connections>
+                                <outlet property="dataSource" destination="iN0-l3-epB" id="eyd-5V-M2Q"/>
+                                <outlet property="delegate" destination="iN0-l3-epB" id="nJF-P9-coc"/>
+                            </connections>
+                        </tableView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="DLW-L2-U03"/>
+                        <constraint firstAttribute="height" constant="300" id="DcA-3u-tf5"/>
+                        <constraint firstAttribute="trailing" secondItem="ezP-uZ-l6y" secondAttribute="trailing" id="Naf-07-Vmz"/>
+                        <constraint firstItem="ezP-uZ-l6y" firstAttribute="top" secondItem="W8D-jy-Wpq" secondAttribute="top" id="WIq-Z6-lB9"/>
+                        <constraint firstItem="ezP-uZ-l6y" firstAttribute="leading" secondItem="W8D-jy-Wpq" secondAttribute="leading" id="ik4-Gc-30Q"/>
+                        <constraint firstAttribute="bottom" secondItem="ezP-uZ-l6y" secondAttribute="bottom" id="rZO-6P-kv3"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="W8D-jy-Wpq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="76" id="G3o-el-fOK"/>
+                <constraint firstItem="bGB-Gs-js3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="NVP-Fo-X0Z"/>
+                <constraint firstAttribute="centerX" secondItem="W8D-jy-Wpq" secondAttribute="centerX" id="Ww4-YI-6Pk"/>
+                <constraint firstAttribute="trailing" secondItem="bGB-Gs-js3" secondAttribute="trailing" id="eUK-A9-dbF"/>
+                <constraint firstAttribute="bottom" secondItem="bGB-Gs-js3" secondAttribute="bottom" id="fth-mB-oCA"/>
+                <constraint firstItem="bGB-Gs-js3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="zz6-g5-aSP"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <connections>
+                <outlet property="_contentView" destination="W8D-jy-Wpq" id="DSg-AV-RTF"/>
+                <outlet property="_contentViewConstrainTop" destination="G3o-el-fOK" id="N5K-nD-khu"/>
+                <outlet property="_tableView" destination="ezP-uZ-l6y" id="u1H-YA-1gX"/>
+                <outlet property="_tapView" destination="bGB-Gs-js3" id="DbC-yX-N0E"/>
+            </connections>
+            <point key="canvasLocation" x="255" y="170"/>
+        </view>
+    </objects>
+</document>

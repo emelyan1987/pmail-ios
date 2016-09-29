@@ -1,0 +1,153 @@
+PODS:
+  - ADALiOS (1.2.4)
+  - AFNetworking (2.6.3):
+    - AFNetworking/NSURLConnection (= 2.6.3)
+    - AFNetworking/NSURLSession (= 2.6.3)
+    - AFNetworking/Reachability (= 2.6.3)
+    - AFNetworking/Security (= 2.6.3)
+    - AFNetworking/Serialization (= 2.6.3)
+    - AFNetworking/UIKit (= 2.6.3)
+  - AFNetworking/NSURLConnection (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.6.3)
+  - AFNetworking/Security (2.6.3)
+  - AFNetworking/Serialization (2.6.3)
+  - AFNetworking/UIKit (2.6.3):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - box-ios-sdk (1.0.10):
+    - box-ios-sdk/logger (= 1.0.10)
+    - box-ios-sdk/no-arc (= 1.0.10)
+  - box-ios-sdk/logger (1.0.10)
+  - box-ios-sdk/no-arc (1.0.10):
+    - box-ios-sdk/logger
+  - CocoaLumberjack (2.2.0):
+    - CocoaLumberjack/Default (= 2.2.0)
+    - CocoaLumberjack/Extensions (= 2.2.0)
+  - CocoaLumberjack/Core (2.2.0)
+  - CocoaLumberjack/Default (2.2.0):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (2.2.0):
+    - CocoaLumberjack/Default
+  - DateTools (1.4.3)
+  - DTCoreText (1.6.16):
+    - DTFoundation/Core (~> 1.7.5)
+    - DTFoundation/DTAnimatedGIF (~> 1.7.5)
+    - DTFoundation/DTHTMLParser (~> 1.7.5)
+    - DTFoundation/UIKit (~> 1.7.5)
+  - DTFoundation/Core (1.7.8)
+  - DTFoundation/DTAnimatedGIF (1.7.8)
+  - DTFoundation/DTHTMLParser (1.7.8):
+    - DTFoundation/Core
+  - DTFoundation/UIKit (1.7.8):
+    - DTFoundation/Core
+  - evernote-cloud-sdk-ios (2.0.5)
+  - FMDB (2.5):
+    - FMDB/standard (= 2.5)
+  - FMDB/common (2.5)
+  - FMDB/standard (2.5):
+    - FMDB/common
+  - Google-API-Client/Common (1.0.422):
+    - gtm-http-fetcher (~> 1.0.141)
+    - gtm-oauth2 (~> 1.0.125)
+  - Google-API-Client/Drive (1.0.422):
+    - Google-API-Client/Common
+    - gtm-http-fetcher (~> 1.0.141)
+    - gtm-oauth2 (~> 1.0.125)
+  - GoogleMaps (1.13.0)
+  - gtm-http-fetcher (1.0.141)
+  - gtm-oauth2 (1.0.126):
+    - gtm-http-fetcher (~> 1.0.141)
+  - InboxKit (0.0.6):
+    - AFNetworking (~> 2.0)
+    - FMDB
+  - JTCalendar (2.1.4)
+  - MBProgressHUD (0.9.1)
+  - OneDriveSDK (1.1.2):
+    - OneDriveSDK/Auth (= 1.1.2)
+    - OneDriveSDK/Common (= 1.1.2)
+    - OneDriveSDK/Extensions (= 1.1.2)
+    - OneDriveSDK/Implementations (= 1.1.2)
+    - OneDriveSDK/OneDriveCoreSDK (= 1.1.2)
+  - OneDriveSDK/Auth (1.1.2):
+    - ADALiOS (~> 1.2.4)
+    - OneDriveSDK/Common
+  - OneDriveSDK/Common (1.1.2)
+  - OneDriveSDK/Extensions (1.1.2):
+    - OneDriveSDK/Auth
+    - OneDriveSDK/Implementations
+    - OneDriveSDK/OneDriveCoreSDK
+  - OneDriveSDK/Implementations (1.1.2):
+    - OneDriveSDK/Common
+  - OneDriveSDK/OneDriveCoreSDK (1.1.2):
+    - OneDriveSDK/Common
+  - SalesforceMobileSDK-iOS/SalesforceNetwork (4.0.0):
+    - SalesforceMobileSDK-iOS/SalesforceSDKCore
+  - SalesforceMobileSDK-iOS/SalesforceRestAPI (4.0.0):
+    - SalesforceMobileSDK-iOS/SalesforceNetwork
+    - SalesforceMobileSDK-iOS/SalesforceSDKCore
+  - SalesforceMobileSDK-iOS/SalesforceSDKCore (4.0.0):
+    - CocoaLumberjack (~> 2.2.0)
+    - SalesforceMobileSDK-iOS/SalesforceSDKCore/arc (= 4.0.0)
+    - SalesforceMobileSDK-iOS/SalesforceSDKCore/base (= 4.0.0)
+    - SalesforceMobileSDK-iOS/SalesforceSDKCore/no-arc (= 4.0.0)
+  - SalesforceMobileSDK-iOS/SalesforceSDKCore/arc (4.0.0):
+    - CocoaLumberjack (~> 2.2.0)
+    - SalesforceMobileSDK-iOS/SalesforceSDKCore/base
+    - SalesforceMobileSDK-iOS/SalesforceSDKCore/no-arc
+  - SalesforceMobileSDK-iOS/SalesforceSDKCore/base (4.0.0):
+    - CocoaLumberjack (~> 2.2.0)
+  - SalesforceMobileSDK-iOS/SalesforceSDKCore/no-arc (4.0.0):
+    - CocoaLumberjack (~> 2.2.0)
+    - SalesforceMobileSDK-iOS/SalesforceSDKCore/base
+  - SWTableViewCell (0.3.7)
+  - UIActionSheet+Blocks (0.9)
+  - UIAlertView+Blocks (0.9)
+
+DEPENDENCIES:
+  - AFNetworking
+  - box-ios-sdk
+  - DateTools (= 1.4.3)
+  - DTCoreText
+  - evernote-cloud-sdk-ios
+  - Google-API-Client/Drive (~> 1.0)
+  - GoogleMaps
+  - InboxKit
+  - JTCalendar
+  - MBProgressHUD
+  - OneDriveSDK
+  - SalesforceMobileSDK-iOS/SalesforceRestAPI
+  - SWTableViewCell (~> 0.3.7)
+  - UIActionSheet+Blocks
+  - UIAlertView+Blocks
+
+SPEC CHECKSUMS:
+  ADALiOS: 8179aed8e136bf79dca5a4138a0c1a0d52701cb2
+  AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  box-ios-sdk: 9294e4f5fc65ee173c62db46a70acd3fd83689b8
+  CocoaLumberjack: 17fe8581f84914d5d7e6360f7c70022b173c3ae0
+  DateTools: c3d055af2c4d039c1791b5bffb1444ad1db32219
+  DTCoreText: 934a16fe9ffdd169c96261721b39dc312b75713d
+  DTFoundation: 46e2b2fafe78d67febfd8d1f85fe9845a093f00e
+  evernote-cloud-sdk-ios: 048cf5dcdc0c64069192d1336b7e121bc1a77e12
+  FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
+  Google-API-Client: cb712cf122f1d7fda966de4c2bc551324573366c
+  GoogleMaps: 7a6caeb8336d7cb42982e969fc9b1b20a889fe79
+  gtm-http-fetcher: 6d4617e7d343b6e4c082b777541c334eb6f5d81e
+  gtm-oauth2: 2a18b824e4f8a02df6cfe987beb59ae9d9697f9d
+  InboxKit: 1a5cd7b2a6e99a8d0c4a08b9e4d72d8a35d4b931
+  JTCalendar: 9b1352c7ec41cc26b19c189d6608ba48060a53d9
+  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
+  OneDriveSDK: 2ba8787756deef12e787ee5dae6cb60e9dc7a6a9
+  SalesforceMobileSDK-iOS: 941b8ffe1763ae075bac61fa5c956ca27679e3c8
+  SWTableViewCell: 2a94aadc9d47b2b611fa064566bf57948b95b579
+  UIActionSheet+Blocks: e180b7dad0a721ab7f212ac9742af799008bb358
+  UIAlertView+Blocks: a46c99c5144f6c5dbc7d62fd2a0678daceec89a3
+
+COCOAPODS: 0.39.0

@@ -1,0 +1,21 @@
+xcodeproj 'planckMailiOS'
+
+target "planckMailiOS" do
+    pod 'DateTools', '1.4.3'
+    pod 'MBProgressHUD'
+    pod 'UIActionSheet+Blocks'
+    pod 'InboxKit'
+    pod 'AFNetworking'
+    pod 'UIAlertView+Blocks'
+    pod 'SWTableViewCell', '~> 0.3.7'
+    pod 'JTCalendar'
+    pod 'box-ios-sdk'
+    pod 'Google-API-Client/Drive', '~> 1.0'
+    pod 'OneDriveSDK'
+    pod 'DTCoreText'
+    pod 'evernote-cloud-sdk-ios'
+    pod 'GoogleMaps'
+    pod 'SalesforceMobileSDK-iOS', :subspecs =>['SalesforceRestAPI']
+
+end
+
